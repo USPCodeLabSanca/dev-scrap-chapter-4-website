@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+require('dotenv').config()
 
 const app = express();
 
@@ -23,7 +24,7 @@ for (let book of data) {
     }
 }
 
-const PORT = 8000;
+const PORT = process.env.PORT || 80;
 
 app.get('/', (req, res) => {
     if (req.query.search) {
