@@ -11,12 +11,12 @@
     let body = document.body;
     searchButton.addEventListener('click', () => {
         if (searchInput.value.length > 0)
-            window.location.href = 'http://localhost:8000/?search=' + searchInput.value;
+            window.location.href = '?search=' + searchInput.value;
     })
     body.addEventListener("keydown", event => {
         console.log(event.keyCode)
         if (event.keyCode === 13 && searchInput.value.length > 0)
-            window.location.href = 'http://localhost:8000/?search=' + searchInput.value;
+            window.location.href = '?search=' + searchInput.value;
     });
 </script>
 </body>
