@@ -1,0 +1,8 @@
+<%- include('header'); %>
+<h2>Resultados</h2>
+<div class="book-list">
+    <% for (let book of results) { %>
+        <%- include('book-card.ejs', {book: book}); %>
+    <% } %>
+</div>
+<%- include('footer'); %>

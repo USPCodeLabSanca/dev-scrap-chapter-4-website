@@ -1,0 +1,19 @@
+<%- include('header'); %>
+<div class="container">
+    <div class="cover-div">
+        <img id="cover" src="https://passapalavra.info/wp-content/uploads/2019/04/naom_5a434d7cb7a8d.jpg" alt="capa">
+    </div>
+</div>
+<div class="sections">
+    <% for (let section of Object.keys(categories)) { %>
+        <section>
+            <h2><%= section %></h2>
+            <div class="book-list">
+                <% for (let book of categories[section]) { %>
+                    <%- include('book-card.ejs', {book: book}); %>
+                <% } %>
+            </div>
+        </section>
+    <% } %>
+</div>
+<%- include('footer'); %>

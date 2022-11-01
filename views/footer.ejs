@@ -1,0 +1,23 @@
+<footer>
+    <ul>
+        <li>Feito com carinho por <b><a href="https://github.com/kibonusp">Gabriel Freitas</a></b> ❤️</li>
+        <li><a href="https://github.com/kibonusp"><i class="fa fa-2x fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/gabrielfreitas-xv/"><i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i></a></li>
+    </ul>
+</footer>
+<script>
+    let searchInput = document.getElementById('site-search');
+    let searchButton = document.getElementById('search-button');
+    let body = document.body;
+    searchButton.addEventListener('click', () => {
+        if (searchInput.value.length > 0)
+            window.location.href = 'http://localhost:8000/?search=' + searchInput.value;
+    })
+    body.addEventListener("keydown", event => {
+        console.log(event.keyCode)
+        if (event.keyCode === 13 && searchInput.value.length > 0)
+            window.location.href = 'http://localhost:8000/?search=' + searchInput.value;
+    });
+</script>
+</body>
+</html>

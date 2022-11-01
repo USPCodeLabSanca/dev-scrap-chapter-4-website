@@ -1,0 +1,15 @@
+<%- include('header'); %>
+<div class="book-div">
+    <div class="basic">
+        <div>
+            <div class="book-title">
+                <h1><%= title %></h1>
+                <span><%= author %></span>
+            </div>
+            <b><span><%= price %></span></b>
+        </div>
+        <img src="<%= cover%>" alt="Cover">
+    </div>
+    <p><%= description %></p>
+</div>
+<%- include('footer'); %>
